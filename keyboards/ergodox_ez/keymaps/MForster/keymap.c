@@ -4,6 +4,7 @@ enum layers {
     BASE,
     GAME,
     NUM,
+    FUNC,
     MOVE,
     SYM,
     SEL,
@@ -20,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [BASE] = LAYOUT_ergodox(
     KC_ESC,        LWIN(KC_F1),   LWIN(KC_F2),   LWIN(KC_F3),   LWIN(KC_F4),   LWIN(KC_F5),   C(KC_KP_0),
     KC_TAB,        LT(I3WSM,KC_Q),LT(I3WS, KC_W),LT(I3MV, KC_E),LT(I3, KC_R),  KC_T,          C(KC_KP_PLUS),
-    KC_CAPSLOCK,   LT(NUM, KC_A), KC_S,          LT(SEL, KC_D), LT(MOVE, KC_F),KC_G,
+    KC_CAPSLOCK,   LT(NUM, KC_A), LT(FUNC, KC_S),LT(SEL, KC_D), LT(MOVE, KC_F),KC_G,
     KC_LSHIFT,     LCTL_T(KC_Z),  KC_X,          KC_C,          KC_V,          KC_B,          C(KC_KP_MINUS),
     KC_LCTRL,      KC_LWIN,       _______,       _______,       KC_LALT,
 
@@ -77,6 +78,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                    _______,       KC_4,          KC_5,          KC_6,          _______,       _______,
     _______,       KC_0,          KC_1,          KC_2,          KC_3,          _______,       _______,
                                   KC_0,          KC_COMMA,      KC_DOT,        _______,       _______,
+
+    _______,       _______,
+    _______,
+    _______,       _______,       _______
+),
+
+[FUNC] = LAYOUT_ergodox(
+    _______,       _______,       _______,       _______,       _______,       _______,       _______,
+    _______,       _______,       _______,       _______,       _______,       _______,       _______,
+    _______,       _______,       _______,       _______,       _______,       _______,
+    _______,       _______,       _______,       _______,       _______,       _______,       _______,
+    _______,       _______,       _______,       _______,       _______,
+
+                                                                               _______,       _______,
+                                                                                              _______,
+                                                                _______,       _______,       _______,
+
+    _______,       _______,       KC_F10,        KC_F11,        KC_F12,        _______,       _______,
+    _______,       _______,       KC_F7,         KC_F8,         KC_F9,         _______,       _______,
+                   _______,       KC_F4,         KC_F5,         KC_F6,         _______,       _______,
+    _______,       _______,       KC_F1,         KC_F2,         KC_F3,         _______,       _______,
+                                  _______,       _______,      _______,        _______,       _______,
 
     _______,       _______,
     _______,
