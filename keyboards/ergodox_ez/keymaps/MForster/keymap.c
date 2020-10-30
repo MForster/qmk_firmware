@@ -1,5 +1,7 @@
 #include QMK_KEYBOARD_H
 
+#define CWIN(kc) (QK_LGUI | QK_LCTL | (kc))
+
 enum layers {
     BASE,
     GAME,
@@ -19,7 +21,7 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [BASE] = LAYOUT_ergodox(
-    KC_ESC,        LWIN(KC_F1),   LWIN(KC_F2),   LWIN(KC_F3),   LWIN(KC_F4),   LWIN(KC_F5),   C(KC_KP_0),
+    KC_ESC,        LWIN(KC_1),    LWIN(KC_2),    LWIN(KC_3),    LWIN(KC_4),    LWIN(KC_5),    C(KC_KP_0),
     KC_TAB,        LT(I3WSM,KC_Q),LT(I3WS, KC_W),LT(I3MV, KC_E),LT(I3, KC_R),  KC_T,          C(KC_KP_PLUS),
     KC_CAPSLOCK,   LT(NUM, KC_A), LT(FUNC, KC_S),LT(SEL, KC_D), LT(MOVE, KC_F),KC_G,
     KC_LSHIFT,     LCTL_T(KC_Z),  KC_X,          KC_C,          KC_V,          KC_B,          C(KC_KP_MINUS),
@@ -208,7 +210,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______,       _______,       _______,       _______,       _______,       _______,       _______,
     _______,       _______,       _______,       SWIN(KC_UP),   _______,       _______,       _______,
                    _______,       SWIN(KC_LEFT), SWIN(KC_DOWN), SWIN(KC_RIGHT),_______,       _______,
-    _______,       _______,       _______,       SWIN(KC_UP),   _______,       _______,       _______,
+    _______,       _______,       _______,       SWIN(KC_DOWN), _______,       _______,       _______,
                                   _______,       _______,       _______,       _______,       _______,
 
     _______,       _______,
@@ -228,9 +230,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                 _______,       _______,       _______,
 
     _______,       _______,       _______,       _______,       _______,       _______,       _______,
-    _______,       _______,       LWIN(KC_7),    LWIN(KC_8),    LWIN(KC_9),    _______,       _______,
-                   _______,       LWIN(KC_4),    LWIN(KC_5),    LWIN(KC_6),    _______,       _______,
-    _______,       _______,       LWIN(KC_1),    LWIN(KC_2),    LWIN(KC_3),    _______,       _______,
+    _______,       _______,       CWIN(KC_7),    CWIN(KC_8),    CWIN(KC_9),    _______,       _______,
+                   _______,       CWIN(KC_4),    CWIN(KC_5),    CWIN(KC_6),    _______,       _______,
+    _______,       _______,       CWIN(KC_1),    CWIN(KC_2),    CWIN(KC_3),    _______,       _______,
                                   _______,       _______,       _______,       _______,       _______,
 
     _______,       _______,
